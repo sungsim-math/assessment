@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미적분 I 수행평가 대기실</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 부드러운 고운돋움 폰트 적용 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Gowun Dodum"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a' }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { 
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            background: linear-gradient(to bottom right, #f8fafc, #eff6ff, #f5f3ff);
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+        
+        .glass-panel { 
+            background: rgba(255, 255, 255, 0.85); 
+            backdrop-filter: blur(16px); 
+            border: 1px solid rgba(255, 255, 255, 0.9); 
+            box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.15); 
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
+
+    <!-- 배경 장식 (긴장감을 살짝 덜어주는 파스텔톤 빛번짐) -->
+    <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse pointer-events-none" style="animation-delay: 2s;"></div>
+
+    <div class="glass-panel rounded-3xl p-8 sm:p-10 max-w-md w-full text-center border-t-4 border-primary-500 relative z-10">
+        
+        <div class="w-16 h-16 bg-primary-50 border border-primary-100 text-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl shadow-sm transform -rotate-3 hover:rotate-3 transition-transform">
+            ⏳
+        </div>
+        
+        <div class="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full mb-3 border border-slate-200">
+            2026학년도 2학년 2학기
+        </div>
+        
+        <h1 class="text-2xl sm:text-3xl font-bold text-slate-800 mb-2">미적분 I 수행평가</h1>
+        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+            선생님의 안내에 따라 지정된 시간에<br>아래 버튼을 클릭하여 평가에 접속하세요.
+        </p>
+        
+        <!-- 주의사항 안내 박스 -->
+        <div class="bg-white/80 border border-slate-200 rounded-xl p-5 mb-8 text-sm text-slate-600 text-left shadow-inner">
+            <h3 class="font-bold text-slate-800 mb-2 flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                접속 전 주의사항
+            </h3>
+            <ul class="list-disc list-inside space-y-2 text-xs sm:text-sm">
+                <li><strong class="text-rose-600">지정된 평가 시간</strong>이 아니면 접속되지 않습니다.</li>
+                <li>오류(404) 화면이 뜨면 <strong class="text-primary-600">새로고침(F5)</strong>을 누르세요.</li>
+                <li>평가 작성 중에는 절대 <strong class="text-primary-600">뒤로가기</strong>를 누르지 마세요.</li>
+            </ul>
+        </div>
+
+        <!-- 단일 고정 링크: 파일명은 live_eval.html로 고정 -->
+        <a href="live_eval.html" class="block w-full py-3.5 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all text-lg transform hover:-translate-y-1">
+            평가지 접속하기 🚀
+        </a>
+    </div>
+
+</body>
+</html>
